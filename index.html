@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Daily Brief</title>
+  <meta name="description" content="Your free twice-daily briefing: tech, cloud, DevOps, world, India, Bengaluru, sport, entertainment, plus habits, family and home picks.">
+  <meta name="theme-color" content="#4f46e5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111827" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Daily Brief">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <img src="icons/icon-192.png" alt="" width="32" height="32">
+      <div>
+        <h1>Daily Brief</h1>
+        <p id="edition" class="muted">Loading…</p>
+      </div>
+    </div>
+    <div class="top-actions">
+      <button id="btn-search" class="icon-btn" aria-label="Search">🔍</button>
+      <button id="btn-listen" class="icon-btn" aria-label="Listen to headlines">🎧</button>
+      <button id="btn-settings" class="icon-btn" aria-label="Settings">⚙️</button>
+    </div>
+  </header>
+
+  <div id="searchbar" class="searchbar" hidden>
+    <input id="q" type="search" placeholder="Search every story today…" autocomplete="off">
+  </div>
+
+  <section class="progress-wrap" aria-label="Today's progress">
+    <div class="progress"><div id="progress-bar"></div></div>
+    <p id="progress-text" class="muted small"></p>
+  </section>
+
+  <nav id="chips" class="chips" aria-label="Sections"></nav>
+
+  <main id="main" tabindex="-1"></main>
+
+  <nav class="tabbar" aria-label="Main">
+    <button data-tab="brief" class="active"><span>⭐</span>Brief</button>
+    <button data-tab="Tech"><span>💻</span>Tech</button>
+    <button data-tab="World"><span>🌍</span>World</button>
+    <button data-tab="Life"><span>🧭</span>Life</button>
+    <button data-tab="you"><span>💛</span>You</button>
+    <button data-tab="saved"><span>🔖</span>Saved</button>
+  </nav>
+
+  <dialog id="settings">
+    <form method="dialog" class="sheet">
+      <h2>Settings</h2>
+      <label>Child's name (stays on this phone only)
+        <input id="set-child" type="text" maxlength="30" placeholder="your child">
+      </label>
+      <label>Text size
+        <select id="set-size"><option value="s">Small</option><option value="m" selected>Medium</option><option value="l">Large</option></select>
+      </label>
+      <label>Theme
+        <select id="set-theme"><option value="auto">Match phone</option><option value="light">Light</option><option value="dark">Dark</option></select>
+      </label>
+      <label class="row"><input id="set-hindi" type="checkbox" checked> Show Hindi stories</label>
+      <label>Items per section before "Show all"
+        <select id="set-perpage"><option>5</option><option selected>10</option><option>15</option></select>
+      </label>
+      <fieldset>
+        <legend>Sections to show</legend>
+        <div id="set-sections" class="checks"></div>
+      </fieldset>
+      <fieldset>
+        <legend>My daily habits (one per line)</legend>
+        <textarea id="set-habits" rows="5"></textarea>
+      </fieldset>
+      <fieldset>
+        <legend>Child's daily habits (one per line)</legend>
+        <textarea id="set-kid-habits" rows="5"></textarea>
+      </fieldset>
+      <div class="sheet-actions">
+        <button type="button" id="btn-share-app" class="secondary">Share this app</button>
+        <button type="button" id="btn-install-help" class="secondary">How to install</button>
+        <button value="ok" class="primary">Save</button>
+      </div>
+      <p class="muted small">Everything you set here, plus saved stories, read marks and habit ticks, is stored only on this device. Nothing is sent anywhere.</p>
+    </form>
+  </dialog>
+
+  <dialog id="install">
+    <form method="dialog" class="sheet">
+      <h2>Install on your phone</h2>
+      <h3>iPhone (Safari)</h3>
+      <ol><li>Open this page in <b>Safari</b>.</li><li>Tap the <b>Share</b> button (square with arrow).</li><li>Tap <b>Add to Home Screen</b>, then <b>Add</b>.</li></ol>
+      <h3>Android (Chrome)</h3>
+      <ol><li>Open this page in <b>Chrome</b>.</li><li>Tap the <b>⋮</b> menu.</li><li>Tap <b>Install app</b> or <b>Add to Home screen</b>.</li></ol>
+      <p class="muted small">It opens full-screen like a normal app, works offline with the last edition, and updates itself at about 6 am and 6 pm IST.</p>
+      <div class="sheet-actions"><button value="ok" class="primary">Got it</button></div>
+    </form>
+  </dialog>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>

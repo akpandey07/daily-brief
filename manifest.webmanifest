@@ -1,0 +1,16 @@
+{
+  "name": "Daily Brief",
+  "short_name": "Daily Brief",
+  "description": "Free twice-daily briefing: tech, cloud, DevOps, world, India, Bengaluru, sport, entertainment, plus habits, family and home picks.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f7fb",
+  "theme_color": "#4f46e5",
+  "orientation": "portrait",
+  "icons": [
+    {"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png"},
+    {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}

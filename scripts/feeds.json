@@ -1,0 +1,449 @@
+{
+ "_comment": "Sections and their free RSS sources. gnews entries are Google News search queries (last 24h). Weight boosts trusted sources in ranking.",
+ "sections": [
+  {
+   "id": "top",
+   "title": "Top stories to know",
+   "icon": "⭐",
+   "group": "World",
+   "gnews": [
+    "India news today"
+   ],
+   "feeds": [
+    {
+     "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+     "w": 1.4,
+     "source": "BBC News"
+    },
+    {
+     "url": "https://www.thehindu.com/news/national/feeder/default.rss",
+     "w": 1.2,
+     "source": "The Hindu"
+    },
+    {
+     "url": "https://www.aljazeera.com/xml/rss/all.xml",
+     "w": 1.1,
+     "source": "Al Jazeera"
+    },
+    {
+     "url": "https://news.google.com/rss?hl=en-IN&gl=IN&ceid=IN:en",
+     "w": 1.3,
+     "source": "Google News"
+    }
+   ],
+   "digest": true
+  },
+  {
+   "id": "ai",
+   "title": "AI",
+   "icon": "🤖",
+   "group": "Tech",
+   "gnews": [
+    "artificial intelligence",
+    "OpenAI OR Anthropic OR Gemini OR Llama",
+    "generative AI enterprise"
+   ],
+   "feeds": [
+    {
+     "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+     "w": 1.3,
+     "source": "TechCrunch"
+    },
+    {
+     "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+     "w": 1.2,
+     "source": "The Verge"
+    },
+    {
+     "url": "https://hnrss.org/frontpage?points=150",
+     "w": 1.2,
+     "source": "Hacker News"
+    }
+   ]
+  },
+  {
+   "id": "cloud",
+   "title": "Cloud: AWS, Azure, GCP",
+   "icon": "☁️",
+   "group": "Tech",
+   "gnews": [
+    "AWS announces",
+    "Microsoft Azure announces",
+    "Google Cloud announces"
+   ],
+   "feeds": [
+    {
+     "url": "https://aws.amazon.com/about-aws/whats-new/recent/feed/",
+     "w": 1.4,
+     "source": "AWS What's New"
+    },
+    {
+     "url": "https://aws.amazon.com/blogs/aws/feed/",
+     "w": 1.4,
+     "source": "AWS News Blog"
+    },
+    {
+     "url": "https://azure.microsoft.com/en-us/blog/feed/",
+     "w": 1.3,
+     "source": "Microsoft Azure Blog"
+    },
+    {
+     "url": "https://cloudblog.withgoogle.com/rss/",
+     "w": 1.3,
+     "source": "Google Cloud Blog"
+    }
+   ]
+  },
+  {
+   "id": "devops",
+   "title": "DevOps, SRE & Platform Engineering",
+   "icon": "🛠️",
+   "group": "Tech",
+   "gnews": [
+    "DevOps",
+    "site reliability engineering OR SRE outage",
+    "platform engineering Kubernetes"
+   ],
+   "feeds": [
+    {
+     "url": "https://thenewstack.io/feed/",
+     "w": 1.3,
+     "source": "The New Stack"
+    },
+    {
+     "url": "https://kubernetes.io/feed.xml",
+     "w": 1.3,
+     "source": "Kubernetes Blog"
+    },
+    {
+     "url": "https://www.cncf.io/feed/",
+     "w": 1.2,
+     "source": "CNCF"
+    },
+    {
+     "url": "https://feed.infoq.com/",
+     "w": 1.2,
+     "source": "InfoQ"
+    },
+    {
+     "url": "https://www.datadoghq.com/blog/index.xml",
+     "w": 1.0,
+     "source": "Datadog Blog"
+    }
+   ]
+  },
+  {
+   "id": "learn",
+   "title": "Events, free credits & certifications",
+   "icon": "🎓",
+   "group": "Tech",
+   "gnews": [
+    "free certification cloud",
+    "AWS OR Azure OR Google Cloud free voucher OR free credits",
+    "tech conference Bengaluru OR webinar DevOps",
+    "AWS summit OR KubeCon OR Microsoft Ignite OR Google Cloud Next"
+   ],
+   "feeds": [
+    {
+     "url": "https://aws.amazon.com/blogs/training-and-certification/feed/",
+     "w": 1.3,
+     "source": "AWS Training & Certification"
+    },
+    {
+     "url": "https://www.freecodecamp.org/news/rss/",
+     "w": 1.1,
+     "source": "freeCodeCamp"
+    }
+   ]
+  },
+  {
+   "id": "world",
+   "title": "World politics",
+   "icon": "🌍",
+   "group": "World",
+   "gnews": [
+    "world politics",
+    "geopolitics",
+    "election results world"
+   ],
+   "feeds": [
+    {
+     "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+     "w": 1.4,
+     "source": "BBC News"
+    },
+    {
+     "url": "https://www.aljazeera.com/xml/rss/all.xml",
+     "w": 1.2,
+     "source": "Al Jazeera"
+    },
+    {
+     "url": "https://rss.dw.com/rdf/rss-en-world",
+     "w": 1.2,
+     "source": "DW"
+    },
+    {
+     "url": "https://www.theguardian.com/world/rss",
+     "w": 1.2,
+     "source": "The Guardian"
+    }
+   ]
+  },
+  {
+   "id": "india",
+   "title": "India",
+   "icon": "🇮🇳",
+   "group": "World",
+   "gnews": [
+    "India politics",
+    "India economy"
+   ],
+   "gnews_hi": [
+    "भारत समाचार"
+   ],
+   "feeds": [
+    {
+     "url": "https://www.thehindu.com/news/national/feeder/default.rss",
+     "w": 1.3,
+     "source": "The Hindu"
+    },
+    {
+     "url": "https://indianexpress.com/section/india/feed/",
+     "w": 1.2,
+     "source": "The Indian Express"
+    },
+    {
+     "url": "https://feeds.feedburner.com/ndtvnews-top-stories",
+     "w": 1.1,
+     "source": "NDTV"
+    },
+    {
+     "url": "https://news.google.com/rss?hl=hi&gl=IN&ceid=IN:hi",
+     "w": 1.1,
+     "lang": "hi",
+     "source": "Google News (Hindi)"
+    }
+   ]
+  },
+  {
+   "id": "bengaluru",
+   "title": "Bengaluru",
+   "icon": "📍",
+   "group": "Local",
+   "gnews": [
+    "Bengaluru",
+    "Bengaluru traffic OR BMTC OR Namma Metro",
+    "Bengaluru events this weekend"
+   ],
+   "feeds": [
+    {
+     "url": "https://www.thehindu.com/news/cities/bangalore/feeder/default.rss",
+     "w": 1.3,
+     "source": "The Hindu"
+    }
+   ]
+  },
+  {
+   "id": "trending",
+   "title": "Trending now",
+   "icon": "🔥",
+   "group": "Local",
+   "note": "From Google Trends India and Reddit. X (Twitter) has no free feed, so it is not included.",
+   "gnews": [],
+   "feeds": [
+    {
+     "url": "https://trends.google.com/trending/rss?geo=IN",
+     "w": 1.4,
+     "kind": "trends",
+     "source": "Google Trends India"
+    },
+    {
+     "url": "https://www.reddit.com/r/india/top/.rss?t=day",
+     "w": 1.1,
+     "source": "Reddit r/india"
+    }
+   ]
+  },
+  {
+   "id": "auto",
+   "title": "Cars & automobiles",
+   "icon": "🚗",
+   "group": "Life",
+   "gnews": [
+    "new car launch India",
+    "electric vehicle",
+    "automobile industry"
+   ],
+   "feeds": [
+    {
+     "url": "https://www.autocar.co.uk/rss",
+     "w": 1.1,
+     "source": "Autocar"
+    },
+    {
+     "url": "https://electrek.co/feed/",
+     "w": 1.1,
+     "source": "Electrek"
+    },
+    {
+     "url": "https://www.motor1.com/rss/news/all/",
+     "w": 1.1,
+     "source": "Motor1"
+    }
+   ]
+  },
+  {
+   "id": "shopping",
+   "title": "Deals & shopping",
+   "icon": "🛍️",
+   "group": "Life",
+   "gnews": [
+    "sale offers India Amazon OR Flipkart",
+    "best gadgets deals India",
+    "new smartphone launch India"
+   ],
+   "feeds": []
+  },
+  {
+   "id": "travel",
+   "title": "Travel",
+   "icon": "✈️",
+   "group": "Life",
+   "gnews": [
+    "travel India",
+    "weekend getaway from Bengaluru",
+    "visa rules travellers Indians"
+   ],
+   "feeds": [
+    {
+     "url": "https://skift.com/feed/",
+     "w": 1.0,
+     "source": "Skift"
+    }
+   ]
+  },
+  {
+   "id": "food",
+   "title": "Food",
+   "icon": "🍲",
+   "group": "Life",
+   "gnews": [
+    "Bengaluru restaurant",
+    "food trends India",
+    "healthy recipes"
+   ],
+   "feeds": []
+  },
+  {
+   "id": "sports",
+   "title": "Sports",
+   "icon": "🏏",
+   "group": "Life",
+   "gnews": [
+    "cricket",
+    "football",
+    "sports India"
+   ],
+   "feeds": [
+    {
+     "url": "https://feeds.bbci.co.uk/sport/rss.xml",
+     "w": 1.3,
+     "source": "BBC Sport"
+    },
+    {
+     "url": "https://www.espncricinfo.com/rss/content/story/feeds/0.xml",
+     "w": 1.3,
+     "source": "ESPNcricinfo"
+    },
+    {
+     "url": "https://www.thehindu.com/sport/feeder/default.rss",
+     "w": 1.1,
+     "source": "The Hindu"
+    }
+   ]
+  },
+  {
+   "id": "watch",
+   "title": "What to watch",
+   "icon": "🎬",
+   "group": "Fun",
+   "gnews": [
+    "OTT releases this week Netflix Prime Video",
+    "new Netflix India series",
+    "Bollywood box office",
+    "Hollywood new releases"
+   ],
+   "feeds": []
+  },
+  {
+   "id": "music",
+   "title": "Music: trending & new",
+   "icon": "🎵",
+   "group": "Fun",
+   "gnews": [
+    "new Hindi song",
+    "Punjabi song trending",
+    "Billboard Hot 100",
+    "new album release"
+   ],
+   "feeds": [
+    {
+     "url": "https://www.billboard.com/feed/",
+     "w": 1.1,
+     "source": "Billboard"
+    }
+   ]
+  },
+  {
+   "id": "videos",
+   "title": "Tech videos",
+   "icon": "▶️",
+   "group": "Fun",
+   "kind": "video",
+   "gnews": [],
+   "feeds": [
+    {
+     "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA",
+     "w": 1.2,
+     "source": "Fireship"
+    },
+    {
+     "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCdngmbVKX1Tgre699-XLlUA",
+     "w": 1.2,
+     "source": "TechWorld with Nana"
+    },
+    {
+     "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCJS9pqu9BzkAMNTmzNMNhvg",
+     "w": 1.1,
+     "source": "Google Cloud Tech"
+    },
+    {
+     "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCd6MoB9NC6uYN2grvUNT-Zg",
+     "w": 1.1,
+     "source": "Amazon Web Services"
+    },
+    {
+     "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC0m-80FnNY2Qb7obvTL_2fA",
+     "w": 1.0,
+     "source": "Microsoft Azure"
+    },
+    {
+     "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvqbFHwN-nwalWPjPUKpvTA",
+     "w": 1.0,
+     "source": "CNCF"
+    },
+    {
+     "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCbfYPyITQ-7l4upoX8nvctg",
+     "w": 1.1,
+     "source": "Two Minute Papers"
+    },
+    {
+     "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCZgt6AzoyjslHTC9dz0UoTw",
+     "w": 1.2,
+     "source": "ByteByteGo"
+    }
+   ]
+  }
+ ],
+ "junk": "(?i)\\b(live updates?|live blog|news bulletin|top stories (from|\\|)|horoscope|rashifal|lottery result|gold (price|rate)s? (today|in)|silver (price|rate)|petrol (and|&) diesel price|weather (today|update) in|stocks? to (buy|watch) today|word of the day|stocks? to buy|buy before|if i could only buy|millionaire[- ]maker|should you buy)\\b|^video\\.|^\\d+ ?news top stories"
+}
