@@ -17,6 +17,7 @@ Settings, the child's name, saved stories, read marks and habit ticks are stored
 - **Sources and sections:** `scripts/feeds.json` (RSS feeds and Google News search queries).
 - **Daily tips, jokes, activities:** `content/*.json`. Each list rotates one entry per day.
 - **Run locally:** `pip install feedparser && python3 scripts/build.py && python3 -m http.server`, then open http://localhost:8000.
+- **App code changes:** bump `CACHE` in `sw.js` (for example `daily-brief-v2`) so installed phones pick up the new version.
 - **Refresh now:** GitHub → Actions → "Build and publish edition" → Run workflow.
 
 ## Limits
