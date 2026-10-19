@@ -7,7 +7,6 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths-ignore: ["data/**"]
 
 permissions:
   contents: write
@@ -27,6 +26,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - id: pages
+        uses: actions/configure-pages@v5
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -34,17 +36,20 @@ jobs:
       - name: Build edition
         run: |
           pip install --quiet feedparser==6.0.12
+          python scripts/restore_archive.py "${{ steps.pages.outputs.base_url }}"
           python scripts/build.py
 
-      - name: Commit edition data
+      # Scheduled workflows pause after 60 days without repository activity,
+      # so the first morning run of each month records a one-line heartbeat.
+      - name: Monthly keep-alive
+        if: github.event_name == 'schedule' && github.event.schedule == '30 0 * * *'
         run: |
-          git config user.name "daily-brief-bot"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data
-          git diff --cached --quiet || git commit -m "Edition $(TZ=Asia/Kolkata date '+%Y-%m-%d %H:%M IST')"
-          git push
-
-      - uses: actions/configure-pages@v5
+          if [ "$(TZ=Asia/Kolkata date +%d)" = "01" ]; then
+            date -u +%FT%TZ > .keepalive
+            git config user.name "daily-brief-bot"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add .keepalive && git commit -m "Monthly keep-alive" && git push
+          fi
 
       - uses: actions/upload-pages-artifact@v3
         with:
